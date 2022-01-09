@@ -50,7 +50,7 @@ class ConstellarExtension {
           ]
       var hari = date.getDay()
       var bulan = date.getMonth()
-      var format = `${listhari[hari]}, ${date.getDay()} ${listbulan[bulan]} ${date.getFullYear} | ${jam}:${menit}:${detik}`
+      var format = `${listhari[hari]}, ${date.getDay()} ${listbulan[bulan]} ${date.getFullYear()} | ${jam}:${menit}:${detik}`
       //Langsung Gasken :v
       console.log(`
 [INFO] Open Constellar 
@@ -60,7 +60,6 @@ class ConstellarExtension {
     ------------------------------------
     • Node : ${process.version}
     • Constellar : ${this.version}
-    • Discord.js : ${require('discord.js').version}
     Dev : Kanaka Nakazawa
     ××××××××××××××××××××××××××××××××××××
     Username : ${client.user.username}
@@ -72,7 +71,7 @@ class ConstellarExtension {
     Channels : ${client.channels.cache.size}
     ====================================
     ©AeryumaDevelopment`)
-
+    
       this.systemStart = Date.now();
       console.log('[SETUP] Constellar Disetel Dalam Mode "Normal"')
       console.log('[SETUP] Bahasa Menggunakan Bahasa Indonesia (Kecuali Eror Menggunakan Bahasa Inggris)')
@@ -107,7 +106,7 @@ class ConstellarExtension {
       } catch (err) {
         console.log(`[ERROR] ApiError (JsonObjAPI) ${err}`)
       }
-
+      
       setInterval(function() {
         try {
           axios.get('http://AeryumaNoriyomi.nekokawaikanaka.repl.co').then(x => {
